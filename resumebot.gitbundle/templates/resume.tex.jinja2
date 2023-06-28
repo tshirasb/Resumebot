@@ -1,0 +1,100 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage{fullpage}
+\usepackage{microtype}
+
+% Header stuff
+\usepackage{fancyhdr}
+% \setlength{\headheight}{20pt}
+\usepackage[headsep=35pt]{geometry}
+
+% Link setup
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={ {{ basics.name}} Resume},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhead{}\fancyfoot{}
+\fancyhead[L]{\large{
+  {{ basics.name }}
+}}
+\fancyhead[C]{\url{
+  {{ basics.email }}
+}}
+\fancyhead[R]{
+  {{ basics.phone }}
+}
+
+\section*{Technical Profile}
+
+
+{% for skill in skills %}
+\paragraph{ {{ skill.name }}:} {{ skill.keywords | join(", ") }}
+
+{% endfor %}
+
+
+\section*{Professional Experience}
+
+{% for job in work %}
+\subsection*{
+  {{ job.startDate }} -- {{ job.endDate }}: {{ job.position}} at {{ job.name }}
+}
+{{ job.summary}}
+
+{% endfor %}
+
+\section*{Awards}
+
+\begin{itemize}
+  {% for award in awards %}
+  \item {{ award.title }}: \textit{
+      {{award.awarder}}
+    } ({{ award.date }})
+  {% endfor %}
+\end{itemize}
+
+\section*{Education}
+
+{% for degree in education %}
+\subsection*{
+  {{ degree.endDate }}: {{ degree.studyType }} {{ degree.area }}
+}
+
+{{ degree.institution }}{% if degree.score %} -- {{ degree.score }} GPA{% endif %}
+
+{% endfor %}
+
+\section*{Projects}
+
+{% for project in projects %}
+\subsection*{
+  {{ project.endDate }}: {{ project.name }}
+}
+{{ project.summary }}
+
+\paragraph{Highlights:}
+{% for highlight in project.highlights %} 
+{{ highlight }} \\
+{% endfor %}
+\url{ {{ project.url }} }
+{% endfor %}
+
+\section*{Languages}
+
+\begin{description}
+  {% for language in languages %}
+  \item[{{ language.language }}] {{ language.fluency }}
+  {% endfor %}
+\end{description}
+
+\end{document}

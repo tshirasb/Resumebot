@@ -1,0 +1,145 @@
+{
+  "meta": {
+    "theme": "Compact"
+  },
+  "basics": {
+    "name": "Tina Shirasb",
+    "label": "Information Systems Graduate",
+    "image": "",
+    "email": "tshirasb@gmail.com",
+    "phone": "215-603-7992",
+    "summary": "Information Systems Graduate looking to apply my software engineering knowledge to develop, maintain, and optimize applications.",
+    "location": {
+      "address": "7615 Lycoming Avenue",
+      "postalCode": "PA 19027",
+      "city": "Elkins Park",
+      "countryCode": "US",
+      "region": "Pennsylvania"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Tina Shirasb",
+        "url": "https://www.linkedin.com/in/tina-shirasb/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Drexel University",
+      "position": "Graduate Dean's Ambassador",
+      "startDate": "2022-09",
+      "endDate": "2023-06",
+      "summary": "Recruiting and advising new graduate students to foster community and encourage retention. Leadership role for graduate students in the College of Computing and Informatics."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Drexel University",
+      "area": "Information Systems",
+      "studyType": "Master's",
+      "startDate": "2022-03",
+      "endDate": "2023-06",
+      "score": "4.0"
+    },
+    {
+      "institution": "Boston University",
+      "area": "Biology",
+      "studyType": "Bachelor's",
+      "startDate": "2017",
+      "endDate": "2021",
+      "score": "3.09"
+    },
+    {
+      "institution": "William Penn Charter School",
+      "studyType": "High School",
+      "startDate": "2013",
+      "endDate": "2017"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Dean's Fellowship",
+      "date": "2022-03-01",
+      "awarder": "Drexel University"
+    },
+    {
+      "title": "Upsilon Pi Epsilon Membership",
+      "date": "2023-05-03",
+      "awarder": "Upsilon Pi Epsilon Honor Society"
+    },
+    {
+      "title": "Dean's List",
+      "date": "2019",
+      "awarder": "Boston University"
+    },
+    {
+      "title": "Cum Laude Membership",
+      "date": "2017",
+      "awarder": "Cum Laude Society, William Penn Charter chapter"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": ["HTML", "CSS", "JavaScript", "SQL", "Python", "C++"]
+    },
+    {
+      "name": "Tools and Libraries",
+      "keywords": [
+        "Figma",
+        "React",
+        "jQuery",
+        "NetworkX",
+        "Git",
+        "Wordpress",
+        "Docker"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Farsi",
+      "fluency": "Conversational"
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Community Information Website",
+      "endDate": "2023",
+      "summary": "Designed a responsive website with interactive elements for Web Design course.",
+      "highlights": ["HTML, CSS, JavaScript"],
+      "url": "https://github.com/tshirasb/GradDeansAmbassadors"
+    },
+    {
+      "name": "Task Manager Website",
+      "endDate": "2022",
+      "summary": "Took on a leadership role on team in Software Development course group project.",
+      "highlights": ["HTML, CSS, JavaScript"],
+      "url": "https://github.com/tshirasb/INFO532-group-project"
+    },
+    {
+      "name": "To Do List App",
+      "endDate": "2022",
+      "summary": "Built Docker image and ran Docker container for Web Systems and Architecture course.",
+      "highlights": ["HTML, CSS, JavaScript, Docker"],
+      "url": "https://hub.docker.com/r/tshirasb/101-todo-app"
+    },
+    {
+      "name": "Clinical Database",
+      "endDate": "2022",
+      "summary": "Designed and implemented SQL database for Database Management course.",
+      "highlights": ["SQL, Visio"],
+      "url": "https://github.com/tshirasb/ClinicalDB-INFO605"
+    }
+  ]
+}
