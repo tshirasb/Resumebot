@@ -1,0 +1,118 @@
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage{fullpage}
+\usepackage{microtype}
+\usepackage{titlesec}
+
+% Header stuff
+\usepackage{fancyhdr}
+% \setlength{\headheight}{20pt}
+\usepackage[headsep=35pt]{geometry}
+
+% Section formatting
+\titleformat
+{\section} % command
+{\normalfont\Large\bfseries} % format
+{\section} % label
+{0.5ex} % separation
+{} % before code
+
+% Subsection formatting
+\titleformat
+{\subsection} % command
+{\bfseries \medium} % format
+{\subsection} % label
+{0.5ex} % separation
+{} % before code
+
+% Section and Subsection spacing
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{4pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+% Paragraphs indent
+\parindent0pt
+
+% Link setup
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={ {{ basics.name}} Resume},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
+\begin{document}
+\pagestyle{fancy}
+\fancyhead{}\fancyfoot{}
+\fancyhead[L]{\large{
+  {{ basics.name }}
+}}
+\fancyhead[C]{\url{
+  {{ basics.email }}
+}}
+\fancyhead[R]{
+  {{ basics.phone }}
+}
+
+\section*{Objective}
+{{ basics.summary }}
+
+\section*{Technical Profile}
+
+\begin {itemize}
+  {% for skill in skills %}
+  \item {
+    \textbf {
+    {{ skill.name }}
+    }: {{ skill.keywords | join(", ") }}
+  }
+  {% endfor %}
+\end{itemize}
+
+\section*{Education}
+
+\begin {itemize}
+  {% for degree in education %}
+  \item{
+    {{ degree.endDate }}: {{ degree.studyType }} {{ degree.area }}
+  }\textit{
+  {{ degree.institution }}
+  }{% if degree.score %} -- {{ degree.score }} GPA{% endif %}
+  {% endfor %}
+\end{itemize}
+
+\section*{Professional Experience}
+
+{% for job in work %}
+\subsection*{
+  {{ job.startDate }} -- {{ job.endDate }}: {{ job.position}} at {{ job.name }}
+}
+{{ job.summary}}
+
+{% endfor %}
+
+\section*{Awards}
+
+\begin{itemize}
+  {% for award in awards %}
+  \item {{ award.title }}: \textit{
+      {{award.awarder}}
+    } ({{ award.date }})
+  {% endfor %}
+\end{itemize}
+
+\section*{Projects}
+
+{% for project in projects %}
+\subsection*{
+  {{ project.endDate }}: {{ project.name }}
+}
+{{ project.summary }}
+
+\url{ {{ project.url }} }
+{% endfor %}
+\end{document}
